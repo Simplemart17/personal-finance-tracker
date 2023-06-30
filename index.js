@@ -1,9 +1,19 @@
 /**
  * @format
  */
-
+import * as React from 'react';
 import { AppRegistry } from 'react-native';
-import App from './App';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { PaperProvider } from 'react-native-paper';
+import App from './Application/App';
 import { name as appName } from './app.json';
-console.log(appName);
-AppRegistry.registerComponent(appName, () => App);
+
+const TrackerApp = () => (
+  <SafeAreaProvider>
+    <PaperProvider>
+      <App />
+    </PaperProvider>
+  </SafeAreaProvider>
+);
+
+AppRegistry.registerComponent(appName, () => TrackerApp);
