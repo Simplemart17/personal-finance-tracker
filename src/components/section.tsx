@@ -1,7 +1,7 @@
 import React from 'react';
 import type { PropsWithChildren } from 'react';
 import { Text, useColorScheme, StyleSheet, View } from 'react-native';
-import { Avatar } from 'react-native-paper';
+import LottieView from 'lottie-react-native';
 
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
@@ -31,8 +31,13 @@ const Section = ({ children, title }: SectionProps): JSX.Element => {
         ]}>
         {children}
       </Text>
-      <View style={styles.img}>
-        <Avatar.Icon size={70} icon="cogs" color="red" style={styles.icon} />
+      <View style={styles.animatedImgWrapper}>
+        <LottieView
+          source={require('../assets/construction.json')}
+          autoPlay
+          loop
+          style={styles.animatedImg}
+        />
       </View>
     </View>
   );
@@ -54,12 +59,12 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     textAlign: 'center',
   },
-  img: {
+  animatedImgWrapper: {
     display: 'flex',
     alignItems: 'center',
   },
-  icon: {
-    backgroundColor: 'white',
+  animatedImg: {
+    width: 200,
   },
 });
 

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PF-Tracker</string>
+    <color name="purple">#28025F</color>
 </resources>

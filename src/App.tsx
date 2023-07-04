@@ -3,8 +3,9 @@
  * @format
  */
 
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import { SafeAreaView, StatusBar, useColorScheme } from 'react-native';
+import LottieSplashScreen from 'react-native-lottie-splash-screen';
 import Section from './components/section';
 
 import { Colors } from 'react-native/Libraries/NewAppScreen';
@@ -16,6 +17,10 @@ const App = (): JSX.Element => {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
     flex: 1,
   };
+
+  useEffect(() => {
+    LottieSplashScreen.hide();
+  }, []);
 
   return (
     <SafeAreaView style={backgroundStyle}>
