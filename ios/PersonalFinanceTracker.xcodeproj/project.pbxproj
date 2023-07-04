@@ -14,6 +14,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-PersonalFinanceTracker-PersonalFinanceTrackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-PersonalFinanceTracker-PersonalFinanceTrackerTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		DF83C2F22A53E5AF00199570 /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = DF83C2F12A53E5AF00199570 /* splash.json */; };
+		DF83C2F32A53EAA600199570 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF83C2ED2A53D80000199570 /* Dynamic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,9 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-PersonalFinanceTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PersonalFinanceTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PersonalFinanceTracker/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-PersonalFinanceTracker-PersonalFinanceTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalFinanceTracker-PersonalFinanceTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-PersonalFinanceTracker-PersonalFinanceTrackerTests/Pods-PersonalFinanceTracker-PersonalFinanceTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		DF83C2EC2A53D80000199570 /* PersonalFinanceTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PersonalFinanceTracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		DF83C2ED2A53D80000199570 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		DF83C2F12A53E5AF00199570 /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = splash.json; path = ../src/assets/splash.json; sourceTree = "<group>"; };
 		DF9AB3862A4E621C002CDA2D /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
 		DF9AB3872A4E621C002CDA2D /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
 		DF9AB3882A4E621C002CDA2D /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
@@ -102,6 +107,7 @@
 		13B07FAE1A68108700A75B9A /* PersonalFinanceTracker */ = {
 			isa = PBXGroup;
 			children = (
+				DF83C2F12A53E5AF00199570 /* splash.json */,
 				DF9AB3852A4E621C002CDA2D /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
@@ -109,6 +115,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				DF83C2ED2A53D80000199570 /* Dynamic.swift */,
+				DF83C2EC2A53D80000199570 /* PersonalFinanceTracker-Bridging-Header.h */,
 			);
 			name = PersonalFinanceTracker;
 			sourceTree = "<group>";
@@ -248,7 +256,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -283,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF83C2F22A53E5AF00199570 /* splash.json in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
@@ -453,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF83C2F32A53EAA600199570 /* Dynamic.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -473,6 +483,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-PersonalFinanceTracker-PersonalFinanceTrackerTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -500,6 +511,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-PersonalFinanceTracker-PersonalFinanceTrackerTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = PersonalFinanceTrackerTests/Info.plist;
@@ -541,6 +553,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PersonalFinanceTracker;
+				SWIFT_OBJC_BRIDGING_HEADER = "PersonalFinanceTracker-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -567,6 +580,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PersonalFinanceTracker;
+				SWIFT_OBJC_BRIDGING_HEADER = "PersonalFinanceTracker-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -603,6 +617,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
+				DONT_GENERATE_INFOPLIST_FILE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
@@ -675,6 +691,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
+				DONT_GENERATE_INFOPLIST_FILE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;

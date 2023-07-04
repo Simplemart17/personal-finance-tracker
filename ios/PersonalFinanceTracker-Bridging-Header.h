@@ -3,4 +3,4 @@
 
 #import "RNSplashScreen.h"
 
-#endif
+#endif /* PersonalFinanceTracker_Bridging_Header_h */
